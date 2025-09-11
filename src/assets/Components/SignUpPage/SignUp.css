@@ -1,0 +1,179 @@
+#signUpSection{
+
+    background-image: url('/111_LE_upscale_balanced_x4.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+     margin: 0;
+    padding: 0;
+    position: relative;
+}
+.signup-container {
+    position: absolute;
+    width: 500px;
+    left: 900px;
+    top: 50px;
+  padding: 76px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.signup-container h1 {
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.signup-form label {
+  font-weight: 500;
+}
+
+.signup-form input {
+  padding: 20px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.signup-form input::placeholder {
+  color: #b0b0b0;
+}
+
+.signin-link {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signin-link a {
+  color: #3c9943;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+
+    text-decoration: underline;
+    text-decoration-color: #2e7d32;
+}
+
+.signup-btn {
+  margin-top: 1rem;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #2e7d32;
+}
+
+@media(min-width: 1120px) and (max-width: 2000px ){
+
+  .signup-container {
+    width: 300px;
+    left:580px;
+    top: 50px;
+    height: 390px;
+  padding: 76px;
+  
+}
+.signup-form input {
+  padding: 14px 20px;
+}
+.signup-btn {
+  margin-top: 10px;
+   padding: 14px 20px;
+}
+.signup-form {
+  gap: 10px;
+  margin-top: -1px;
+}
+#h1Signup{
+ margin-top: -50px;
+ margin-right: 100px;
+}
+
+}
+
+
+@media(min-width: 768px) and (max-width: 1121px ){
+
+    .signup-container {
+    width: 300px;
+    left:300px;
+    top: 50px;
+    height: 325px;
+  padding: 76px;
+  
+}
+.signup-form input {
+  padding: 14px 20px;
+}
+.signup-btn {
+  margin-top: 10px;
+   padding: 14px 20px;
+}
+.signup-form {
+  gap: 7px;
+  margin-top: -20px;
+}
+#h1Signup{
+ margin-top: -60px;
+}
+}
+
+@media(min-width: 320px) and (max-width: 767px ){
+    
+  #signUpSection{
+    background-image: url('/111_LE_upscale_balanced_x4.jpg');
+    background-size: cover;
+    width: 240vw;
+    height: 220vh;
+     margin: 0;
+    padding: 0;
+    position: relative;
+}
+.signup-btn {
+  font-size: 20px;
+}
+  .signup-container {
+  backdrop-filter: blur(10px);         
+  -webkit-backdrop-filter: blur(10px);
+    width: 300px;
+    left:120px;
+    top: 250px;
+    height: 525px;
+  padding: 76px;
+  font-size: 20px;
+  
+}
+.signup-form input {
+  padding: 20px 20px;
+  font-size: 20px;
+}
+.signup-btn {
+  margin-top: 10px;
+   padding: 14px 20px;
+}
+.signup-form {
+  gap: 7px;
+  margin-top: -10px; 
+}
+#h1Signup{
+ margin-top: -3px;
+}
+}

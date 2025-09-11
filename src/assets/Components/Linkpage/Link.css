@@ -1,0 +1,150 @@
+#linkSection {
+    background-image: url('/backgroundlink.png');
+     background-size: contain;
+     background-color: #c7c5c5;
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.link-container {
+    padding: 40px;
+    position: absolute;
+    left: 900px;
+    top: 100px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.link-container h1 {
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.link-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.link-form label {
+    font-weight: 500;
+    color: #000000;
+}
+
+.link-input {
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.link-input::placeholder {
+    color: #b0b0b0;
+}
+
+
+
+.submit-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    background-color: #000000;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background-color: #2e7d32;
+}
+
+.view-btn {
+      font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    padding: 15px 20px;                                    
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+}
+
+.view-btn:hover {
+    background-color: #2f800a;
+}
+
+.divider {
+    margin: 2rem 0;
+    text-align: center;
+    color: #000000;
+}
+
+@media(min-width: 1120px) and (max-width: 2000px ){
+.link-container {
+    padding: 20px;
+    position: absolute;
+    left: 500px;
+    height: 450px;
+    top: 60px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+#linkSection {
+    background-image: url('/backgroundlink.png');
+     background-size: cover;
+   
+}
+.link-form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: left;
+    margin-top: -30px;
+}
+.link-container h1 {
+    margin-bottom: -30px;
+    margin-top: 10px;
+    color: #000000;
+}
+.link-input {
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.view-btn {
+      font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top:32px;
+    padding: 15px 20px;                                    
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+}
+.divider {
+    margin-top: -10px;
+    text-align: center;
+    color: #000000;
+}
+
+}

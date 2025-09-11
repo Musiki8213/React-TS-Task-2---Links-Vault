@@ -1,0 +1,80 @@
+/* src/assets/Components/Linklist/LinkList.css */
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.link-card {
+  background-color: #1c1c1c; /* dark gray card */
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link-card h3 {
+  margin: 0 0 10px 0;
+  color: #2e7d32; /* green accent for titles */
+}
+
+.link-card a {
+  color: #2f800a; /* green for URLs */
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+.link-card p {
+  color: #d0d0d0; /* light gray for description */
+  margin: 10px 0;
+}
+
+.link-card small {
+  color: #a0a0a0; /* gray for tags */
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-actions button:first-child {
+  background-color: #2e7d32; /* green edit button */
+  color: #fff;
+}
+
+.card-actions button:last-child {
+  background-color: #ff4d4f; /* red delete button */
+  color: #fff;
+}
+
+.card-actions button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .link-card {
+    width: 90%;
+  }
+}

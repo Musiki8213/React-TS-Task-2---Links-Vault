@@ -1,0 +1,231 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+#logoImg{
+    margin-left: 80px;
+    width: 250px;
+    height: 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d9d9d9; 
+}
+ul{
+    margin-right: 100px;
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#homeImg{
+    width: 100%;
+}
+#section {
+    background-image: url('/c6e7c290e1b3b99323b4367e26002008_LE_upscale_balanced_x4.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 91.6vh;
+     margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#heading {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 170px;  
+    right: 400px;   
+    padding-inline: 0;
+    font-size: 22px;
+}
+#flexBtn{
+    display: flex;
+    gap:40px;
+}
+#signBtn{
+color: white;
+background-color: black;
+ padding: 20px 20px;
+ border-radius: 8px;
+cursor: pointer;
+box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.42);
+border: hidden;
+transition: background 0.3s ease, transform 0.2s ease;
+
+}
+#signBtn:hover {
+    background-color:  #134117;
+    
+}
+
+ul li a:hover {
+  color: #3c9943; 
+  text-decoration: underline;
+  text-decoration-color: #3c9943 ;
+
+}
+
+#aboutIcon{
+    width: 35%;
+}
+#loginIcon{
+    width: 35%;
+}
+#signupIcon{
+    width: 40%;
+}
+
+@media(min-width: 1040px) and (max-width: 2000px ){
+
+#logoImg{
+    width: 200px;
+    height: 50px;
+}
+nav{
+    height: 70px;
+}
+#section {
+    height: 82.6vh;
+}
+
+#heading {
+    bottom: 30px;  
+    right: 250px;   
+    font-size: 16px;
+}
+
+#signBtn{
+ padding: 12px 20px;
+ border-radius: 8px;
+
+}
+}
+
+
+@media(min-width: 768px) and (max-width: 1040px ){
+
+#logoImg{
+    width: 150px;
+    height: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d9d9d9; 
+}
+ul{
+    margin-right: 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+#section {
+    height: 82.6vh;
+}
+
+#heading {
+    bottom: 40px;  
+    right: 100px;   
+    font-size: 14px;
+}
+
+#signBtn{
+ padding: 12px 20px;
+ border-radius: 8px;
+
+}
+#aboutIcon{
+    width: 25%;
+    margin-left: -10px;
+}
+#loginIcon{
+    width: 25%;
+}
+#signupIcon{
+    width: 30%;
+    
+    margin-left: -5px;
+}
+}
+
+
+
+@media(min-width: 320px) and (max-width: 768px ){
+
+#logoImg{
+    margin-left: -20px;
+    width: 90px;
+    height: 30px;
+}
+
+nav{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9; 
+}
+ul{
+    margin-right: 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 1px;;
+    width: 190px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+#section {
+    height: 90vh;
+    width: 100vw;
+}
+
+#heading {
+    bottom: 90px;  
+    right: 8px;   
+    font-size: 10px;
+}
+
+#signBtn{
+ padding: 12px 20px;
+ border-radius: 8px;
+
+}
+#aboutIcon{
+    width: 25%;
+    margin-left: -10px;
+}
+#loginIcon{
+    width: 25%;
+}
+#signupIcon{
+    width: 30%;
+    
+    margin-left: -5px;
+}
+}
