@@ -1,4 +1,4 @@
-/* src/assets/Components/Linklist/LinkList.css */
+
 
 .link-list {
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .link-card {
-  background-color: #1c1c1c; /* dark gray card */
+  background-color: #1c1c1c;
   color: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -22,11 +22,11 @@
 
 .link-card h3 {
   margin: 0 0 10px 0;
-  color: #2e7d32; /* green accent for titles */
+  color: #2e7d32; 
 }
 
 .link-card a {
-  color: #2f800a; /* green for URLs */
+  color: #2f800a;
   text-decoration: none;
   word-break: break-all;
 }
@@ -36,12 +36,12 @@
 }
 
 .link-card p {
-  color: #d0d0d0; /* light gray for description */
+  color: #d0d0d0; 
   margin: 10px 0;
 }
 
 .link-card small {
-  color: #a0a0a0; /* gray for tags */
+  color: #a0a0a0;
 }
 
 .card-actions {
@@ -60,12 +60,12 @@
 }
 
 .card-actions button:first-child {
-  background-color: #2e7d32; /* green edit button */
+  background-color: #2e7d32; 
   color: #fff;
 }
 
 .card-actions button:last-child {
-  background-color: #ff4d4f; /* red delete button */
+  background-color: #ff4d4f; 
   color: #fff;
 }
 
