@@ -1,6 +1,6 @@
 #linkSection {
     background-image: url('/backgroundlink.png');
-     background-size: contain;
+     background-size: cover;
      background-color: #c7c5c5;
     background-repeat: no-repeat;
     background-position: center; 
@@ -92,7 +92,7 @@
     color: #000000;
 }
 
-@media(min-width: 1120px) and (max-width: 2000px ){
+@media(min-width: 1120px) and (max-width: 1440px ){
 .link-container {
     padding: 20px;
     position: absolute;
