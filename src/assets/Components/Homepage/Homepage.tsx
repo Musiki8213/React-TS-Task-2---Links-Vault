@@ -7,38 +7,24 @@ export const Homepage = () => {
       <nav>
         <img id="logoImg" src="/logoImg.png" alt="Link Logo" />
         <ul>
-          <div  style={{ display: "flex", flexDirection: "column", width: "80px" }}>
-            <li>
-              <div id="aboutDiv"  style={{ marginLeft: "20px" }}>
-                <img id="aboutIcon" src="/aboutlogo.png" alt="about" />
-              </div>
-              <div>
-                <Link to="/about">About</Link>
-              </div>
-            </li>
-          </div>
-
-          <div id="LoginDiv"  style={{ display: "flex", flexDirection: "column", width: "80px" }}>
-            <li>
-              <div style={{ marginLeft: "7px" }}>
-                <img id="loginIcon" src="/loginlogo.png" alt="login" />
-              </div>
-              <div>
-                <Link to="/login">Login</Link>
-              </div>
-            </li>
-          </div>
-
-          <div id="signupDiv"  style={{ display: "flex", flexDirection: "column", width: "80px" }}>
-            <li>
-              <div style={{ marginLeft: "20px" }}>
-                <img id="signupIcon" src="/736545-200.png" alt="signup" />
-              </div>
-              <div>
-                <Link to="/signup">Sign Up</Link>
-              </div>
-            </li>
-          </div>
+          <li>
+            <Link to="/about" className="nav-link">
+              <img id="aboutIcon" src="/aboutlogo.png" alt="about" />
+              <span>About</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="nav-link">
+              <img id="loginIcon" src="/loginlogo.png" alt="login" />
+              <span>Login</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" className="nav-link">
+              <img id="signupIcon" src="/736545-200.png" alt="signup" />
+              <span>Sign Up</span>
+            </Link>
+          </li>
         </ul>
       </nav>
 

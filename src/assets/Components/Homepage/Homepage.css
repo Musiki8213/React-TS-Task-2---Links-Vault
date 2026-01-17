@@ -1,33 +1,95 @@
-
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     overflow-y: hidden;
 }
+
 #logoImg{
     margin-left: 80px;
     width: 250px;
     height: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
 }
+
+#logoImg:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #d9d9d9; 
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #e8e8e8 0%, #d9d9d9 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
+
 ul{
     margin-right: 100px;
     list-style-type: none;
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    align-items: center;
 }
-ul li a{
+
+ul li {
+    position: relative;
+}
+
+.nav-link {
     text-decoration: none;
-    color: black;
+    color: #1a1a1a;
     font-size: 18px;
-    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 70px;
+}
+
+.nav-link img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.nav-link span {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #2e7d32;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #2e7d32;
+    background-color: rgba(46, 125, 50, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+    width: 80%;
 }
 
 #homeImg{
@@ -36,56 +98,123 @@ ul li a{
 #section {
     background-image: url('/c6e7c290e1b3b99323b4367e26002008_LE_upscale_balanced_x4.jpg');
     background-size: cover;
+    background-position: center;
     width: 100vw;
     height: 91.6vh;
-     margin: 0;
+    margin: 0;
     padding: 0;
     position: relative;
+    overflow: hidden;
+}
+
+#section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
 }
 
 #heading {
-    color: rgb(0, 0, 0);
+    color: #1a1a1a;
     position: absolute;
     bottom: 170px;  
-    right: 400px;   
-    padding-inline: 0;
+    right: 50%;
+    transform: translateX(50%);
+    padding-inline: 20px;
     font-size: 22px;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-out;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
 }
+
+#heading h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+#heading p {
+    font-size: 1.3rem;
+    color: #2a2a2a;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
 #flexBtn{
     display: flex;
-    gap:40px;
+    gap: 20px;
+    margin-top: 30px;
 }
+
 #signBtn{
-color: white;
-background-color: black;
- padding: 20px 20px;
- border-radius: 8px;
-cursor: pointer;
-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.42);
-border: hidden;
-transition: background 0.3s ease, transform 0.2s ease;
-
+    color: white;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 18px 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
 }
+
+#signBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+#signBtn:hover::before {
+    left: 100%;
+}
+
 #signBtn:hover {
-    background-color:  #134117;
-    
+    background: linear-gradient(135deg, #134117 0%, #2e7d32 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-ul li a:hover {
-  color: #3c9943; 
-  text-decoration: underline;
-  text-decoration-color: #3c9943 ;
-
+#signBtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(46, 125, 50, 0.3);
 }
 
-#aboutIcon{
-    width: 35%;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-#loginIcon{
-    width: 35%;
-}
-#signupIcon{
-    width: 40%;
+
+
+#aboutIcon,
+#loginIcon,
+#signupIcon {
+    display: block;
 }
 
 @media(min-width: 1042px) and (max-width: 1440px ){
@@ -103,14 +232,24 @@ nav{
 
 #heading {
     bottom: 30px;  
-    right: 250px;   
+    right: 50%;
+    transform: translateX(50%);
     font-size: 16px;
+    padding-inline: 20px;
+}
+
+#heading h1 {
+    font-size: 2.5rem;
+}
+
+#heading p {
+    font-size: 1.1rem;
 }
 
 #signBtn{
- padding: 12px 20px;
- border-radius: 8px;
-
+ padding: 14px 30px;
+ border-radius: 12px;
+ font-size: 14px;
 }
 }
 
@@ -127,19 +266,26 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #d9d9d9; 
+    background: linear-gradient(135deg, #e8e8e8 0%, #d9d9d9 100%);
 }
 ul{
     margin-right: 10px;
     list-style-type: none;
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
-ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-    transition: color 0.3s ease, transform 0.2s ease;
+.nav-link {
+    padding: 6px 10px;
+    min-width: 60px;
+}
+
+.nav-link span {
+    font-size: 11px;
+}
+
+.nav-link img {
+    width: 20px;
+    height: 20px;
 }
 #section {
     height: 82.6vh;
@@ -147,26 +293,24 @@ ul li a{
 
 #heading {
     bottom: 40px;  
-    right: 100px;   
+    right: 50%;
+    transform: translateX(50%);
     font-size: 14px;
+    padding-inline: 20px;
+}
+
+#heading h1 {
+    font-size: 2rem;
+}
+
+#heading p {
+    font-size: 1rem;
 }
 
 #signBtn{
- padding: 12px 20px;
- border-radius: 8px;
-
-}
-#aboutIcon{
-    width: 25%;
-    margin-left: -10px;
-}
-#loginIcon{
-    width: 25%;
-}
-#signupIcon{
-    width: 30%;
-    
-    margin-left: -5px;
+ padding: 12px 24px;
+ border-radius: 12px;
+ font-size: 14px;
 }
 }
 
@@ -181,24 +325,32 @@ ul li a{
 }
 
 nav{
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d9d9d9; 
+    background: linear-gradient(135deg, #e8e8e8 0%, #d9d9d9 100%);
+    padding: 10px 15px;
 }
 ul{
-    margin-right: 10px;
+    margin-right: 5px;
     list-style-type: none;
     display: flex;
-    gap: 1px;;
-    width: 190px;
+    gap: 4px;
+    width: auto;
 }
-ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-    transition: color 0.3s ease, transform 0.2s ease;
+.nav-link {
+    padding: 4px 6px;
+    min-width: 50px;
+}
+
+.nav-link span {
+    font-size: 10px;
+}
+
+.nav-link img {
+    width: 16px;
+    height: 16px;
 }
 #section {
     height: 90vh;
@@ -207,25 +359,35 @@ ul li a{
 
 #heading {
     bottom: 90px;  
-    right: 8px;   
+    right: 8px;
+    left: 8px;
+    transform: none;
     font-size: 10px;
+    text-align: center;
+    width: calc(100% - 16px);
+}
+
+#heading h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#heading p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+#flexBtn {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
 }
 
 #signBtn{
- padding: 12px 20px;
- border-radius: 8px;
-
-}
-#aboutIcon{
-    width: 25%;
-    margin-left: -10px;
-}
-#loginIcon{
-    width: 25%;
-}
-#signupIcon{
-    width: 30%;
-    
-    margin-left: -5px;
+ padding: 12px 24px;
+ border-radius: 12px;
+ font-size: 14px;
+ width: 100%;
+ max-width: 200px;
 }
 }
