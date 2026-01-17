@@ -1,31 +1,43 @@
 #linkSection {
     background-image: url('/backgroundlink.png');
-     background-size: cover;
-     background-color: #c7c5c5;
+    background-size: cover;
+    background-color: #c7c5c5;
     background-repeat: no-repeat;
     background-position: center; 
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 40px 20px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link-container {
-    padding: 40px;
-    position: absolute;
-    left: 900px;
-    top: 100px;
-    width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.5s ease-out;
 }
 
 .link-container h1 {
-    margin-bottom: 2rem;
-    color: #000000;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.link-subtitle {
+    color: #666;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
 }
 
 .link-form {
@@ -35,55 +47,135 @@
     text-align: left;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
 .link-form label {
-    font-weight: 500;
-    color: #000000;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 0.9rem;
 }
 
 .link-input {
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
     background-color: #ffffff;
     color: #000000;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.link-input:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+    transform: translateY(-1px);
+}
+
+.link-input.input-error {
+    border-color: #d32f2f;
+    background-color: #fff5f5;
 }
 
 .link-input::placeholder {
     color: #b0b0b0;
 }
 
-
-
-.submit-btn {
-    padding: 15px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
-    background-color: #000000;
-    color: #fff;
+.error-message {
+    color: #d32f2f;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+    animation: shake 0.3s ease;
 }
 
-.submit-btn:hover {
-    background-color: #2e7d32;
+.submit-btn {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0.3rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #134117 0%, #2e7d32 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
 }
 
 .view-btn {
-      font-weight: 600;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
-    padding: 15px 20px;                                    
-    border: none;
-    border-radius: 8px;
-    background-color: #000;
-    color: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0.8rem;
+    padding: 14px 20px;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    width: 100%;
 }
 
 .view-btn:hover {
-    background-color: #2f800a;
+    background-color: #1a1a1a;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 .divider {
@@ -93,58 +185,48 @@
 }
 
 @media(min-width: 1120px) and (max-width: 1440px ){
-.link-container {
-    padding: 20px;
-    position: absolute;
-    left: 500px;
-    height: 450px;
-    top: 60px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-#linkSection {
-    background-image: url('/backgroundlink.png');
-     background-size: cover;
-   
-}
-.link-form {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    text-align: left;
-    margin-top: -30px;
-}
-.link-container h1 {
-    margin-bottom: -30px;
-    margin-top: 10px;
-    color: #000000;
-}
-.link-input {
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: none;
-    background-color: #ffffff;
-    color: #000000;
+    .link-container {
+        width: 90%;
+        max-width: 550px;
+        padding: 30px 25px;
+    }
 }
 
-.view-btn {
-      font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top:32px;
-    padding: 15px 20px;                                    
-    border: none;
-    border-radius: 8px;
-    background-color: #000;
-    color: #fff;
-}
-.divider {
-    margin-top: -10px;
-    text-align: center;
-    color: #000000;
+@media(min-width: 768px) and (max-width: 1120px ){
+    .link-container {
+        width: 90%;
+        max-width: 500px;
+        padding: 30px 20px;
+    }
 }
 
+@media(min-width: 320px) and (max-width: 767px ){
+    .link-container {
+        width: 95%;
+        padding: 25px 18px;
+    }
+    
+    .link-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .link-subtitle {
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .link-form {
+        gap: 0.9rem;
+    }
+    
+    .link-input {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn,
+    .view-btn {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
 }
