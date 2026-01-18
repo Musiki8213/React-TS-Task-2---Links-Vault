@@ -9,7 +9,7 @@ import { ToastContainer } from "../Toast/Toast";
 
 const LinkOutcome: React.FC = () => {
   const navigate = useNavigate();
-  const { toasts, removeToast, success, error, warning } = useToast();
+  const { toasts, removeToast, success } = useToast();
   const [links, setLinks] = useState<LinkItem[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
