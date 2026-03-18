@@ -1,26 +1,26 @@
-# 🔗 Link Vault
+# Link Vault
 
 A modern, responsive web application built with React and TypeScript for storing, managing, and organizing your favorite links. Save your bookmarks locally in your browser and access them anytime with a sleek, professional interface.
 
-## ✨ Features
+## Features
 
-### 🔐 User Authentication
+### User Authentication
 - **Sign Up**: Create a new account with email and password
 - **Login**: Secure authentication using localStorage
 - **User Management**: Each user can manage their own links
 
-### 📝 Link Management
+### Link Management
 - **Add Links**: Save new links with title, URL, description, and tags
 - **Edit Links**: Update existing link information
 - **Delete Links**: Remove links you no longer need
 - **Auto URL Formatting**: Automatically adds `https://` if missing
 
-### 🔍 Search & Filter
+### Search & Filter
 - **Real-time Search**: Search links by title, URL, description, or tags
 - **Instant Filtering**: Results update as you type
 - **Clear Search**: Easy search reset functionality
 
-### 🎨 Modern UI/UX
+### Modern UI/UX
 - **Polished Design**: Professional styling with smooth animations
 - **Toast Notifications**: Beautiful success/error feedback instead of alerts
 - **Form Validation**: Real-time validation with visual feedback
@@ -28,13 +28,13 @@ A modern, responsive web application built with React and TypeScript for storing
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
 - **Smooth Transitions**: Elegant animations throughout the app
 
-### 🎯 User Experience
+### User Experience
 - **Empty States**: Helpful messages when no links are found
 - **Link Count**: See how many links you have saved
 - **Tag System**: Organize links with custom tags
 - **External Links**: Open links in new tabs with proper security attributes
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 19.1.1** - UI library
@@ -54,7 +54,7 @@ A modern, responsive web application built with React and TypeScript for storing
 - **ESLint** - Code linting
 - **TypeScript ESLint** - TypeScript-specific linting rules
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 - Node.js (v18 or higher recommended)
@@ -81,7 +81,7 @@ A modern, responsive web application built with React and TypeScript for storing
 4. **Open your browser**
    - Navigate to `http://localhost:5173` (or the port shown in terminal)
 
-## 🚀 Usage
+## Usage
 
 ### Getting Started
 
@@ -108,7 +108,7 @@ A modern, responsive web application built with React and TypeScript for storing
    - Click "Edit" to modify a link
    - Click "Delete" to remove a link permanently
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 React-TS-Task-2---Links-Vault/
@@ -140,7 +140,7 @@ React-TS-Task-2---Links-Vault/
 └── README.md               # This file
 ```
 
-## 🎨 Key Components
+## Key Components
 
 ### Authentication
 - **SignUp**: User registration with form validation
@@ -156,14 +156,14 @@ React-TS-Task-2---Links-Vault/
 - **Homepage**: Landing page with navigation
 - **About**: Information about the application
 
-## 🔧 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
-## 🎯 Features in Detail
+## Features in Detail
 
 ### Form Validation
 - Real-time validation with error messages
@@ -182,7 +182,7 @@ React-TS-Task-2---Links-Vault/
 - Breakpoints for tablet and desktop
 - Optimized layouts for all screen sizes
 
-## 🔒 Data Storage
+## Data Storage
 
 All data is stored locally in the browser's `localStorage`:
 - **Users**: Stored under `users` key
@@ -190,19 +190,19 @@ All data is stored locally in the browser's `localStorage`:
 
 **Note**: Data is browser-specific and will not sync across devices or browsers.
 
-## 🚧 Future Enhancements
+## Future Enhancements
 
 Potential features for future versions:
-- ☁️ Cloud sync across devices
-- 👤 Enhanced user profiles
-- 📊 Link analytics and statistics
-- 🔖 Folder/category organization
-- 🌐 Browser extension
-- 📱 Mobile app
-- 🔗 Link previews/thumbnails
-- 📤 Export/Import functionality
+-  Cloud sync across devices
+-  Enhanced user profiles
+-  Link analytics and statistics
+-  Folder/category organization
+-  Browser extension
+-  Mobile app
+-  Link previews/thumbnails
+-  Export/Import functionality
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
